@@ -13074,10 +13074,23 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Milestone-1-Data-Science:-Max-Motz-and-Alec-Rovner:">Milestone 1 Data Science: Max Motz and Alec Rovner:<a class="anchor-link" href="#Milestone-1-Data-Science:-Max-Motz-and-Alec-Rovner:">&#182;</a></h2><p>We are using the IPUMS data set to compare and contrast public and private school students with a host of factors including post-grad salary, owned real-estate, veteran status, and many other factors in which we hope to utilize to find interesting correlations and trends with to analyze the difference in attending individuals and long-term effects of the two schooling systems. We are utilizing the IPUMS dataset to begin our project because it provides useful base information that can provide baselines as to where we would like to go with out project.</p>
+<h2 id="Milestone-1-Data-Science:-Max-Motz-and-Alec-Rovner:"><a href="https://arovn10.github.io">Milestone 1</a> Data Science: Max Motz and Alec Rovner:<a class="anchor-link" href="#Milestone-1-Data-Science:-Max-Motz-and-Alec-Rovner:">&#182;</a></h2><p>We are using the IPUMS data set to compare and contrast public and private school students with a host of factors including post-grad salary, owned real-estate, veteran status, and many other factors in which we hope to utilize to find interesting correlations and trends with to analyze the difference in attending individuals and long-term effects of the two schooling systems. We are utilizing the IPUMS dataset to begin our project because it provides useful base information that can provide baselines as to where we would like to go with out project.</p>
 <p>Our collaboration plan is to utilize Google Drives Collab Feature to simultaneously work on a Python notebook. We will make regular commits to a github repository for version control and fork/work on independent copies of the file at times when we are both working on different aspects of the file. Our group will meet one to two times per week in order to recap what we have been working on and set goals for each of us to individually commit and push to the project by our next meeting. The majority of our meetings will take place in person on Wednesday night each week as we are both available then.</p>
 <p>Through the IPUMS data set, we hope to answer the question of “does attending private school from an early age versus public school really affect your outcome in life?”. This question can be answered using post graduate individual salaries from all of the points in the data set downloaded. Another question we hope to answer is “does the enrollment of public school really affect the chances of joining the military?”.  We will be using veteran status as a flag as to whether or not the individual enlisted in the military.</p>
 
@@ -13086,7 +13099,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -13127,7 +13140,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">#Current data set scope is one year for size purposes (larger sizes crash RAM)</span>
@@ -13146,7 +13159,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13359,7 +13372,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -13375,7 +13388,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13416,7 +13429,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">tidydf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SERIAL&#39;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GQ&#39;</span><span class="p">,</span><span class="s1">&#39;SCHLTYPE&#39;</span><span class="p">,</span><span class="s1">&#39;INCTOT&#39;</span><span class="p">])</span>
@@ -13433,7 +13446,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13633,7 +13646,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">#The School Type variable shows the proportion of indiviudals in the dataset and what school they go to</span>
@@ -13654,7 +13667,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13686,7 +13699,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">#Interesting Stat</span>
@@ -13707,7 +13720,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[72]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13724,7 +13737,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">#The Group Quarters variable idicates what living situation the individual resided in</span>
@@ -13746,7 +13759,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13768,7 +13781,7 @@ Name: GQ, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GQ&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">**</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
@@ -13784,7 +13797,7 @@ Name: GQ, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13816,7 +13829,7 @@ Name: GQ, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">shell</span>
@@ -13838,14 +13851,14 @@ Name: GQ, dtype: int64</pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook /content/drive/MyDrive/cmps3160/_projects/FinalProjectRovnerMotz/RovnerMotzFinalProject.ipynb to html
-[NbConvertApp] Writing 289845 bytes to /content/drive/MyDrive/cmps3160/_projects/FinalProjectRovnerMotz/RovnerMotzFinalProject.html
+[NbConvertApp] Writing 315459 bytes to /content/drive/MyDrive/cmps3160/_projects/FinalProjectRovnerMotz/RovnerMotzFinalProject.html
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
