@@ -13086,7 +13086,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -13127,10 +13127,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">a_file</span> <span class="o">=</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;usa_00002.csv.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#Current data set scope is one year for size purposes (larger sizes crash RAM)</span>
+<span class="n">a_file</span> <span class="o">=</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;usa_00004.csv.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">a_file</span><span class="p">,</span> <span class="n">engine</span> <span class="o">=</span> <span class="s1">&#39;python&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -13139,14 +13140,687 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-40fca8fd-2a6c-4b8a-a338-b3428c47e0e0">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+      <th>SAMPLE</th>
+      <th>SERIAL</th>
+      <th>CBSERIAL</th>
+      <th>HHWT</th>
+      <th>CLUSTER</th>
+      <th>STRATA</th>
+      <th>GQ</th>
+      <th>PERNUM</th>
+      <th>PERWT</th>
+      <th>SCHLTYPE</th>
+      <th>INCTOT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2019</td>
+      <td>201901</td>
+      <td>1</td>
+      <td>2019010000088</td>
+      <td>11.0</td>
+      <td>2019000000011</td>
+      <td>220001</td>
+      <td>4</td>
+      <td>1</td>
+      <td>11.0</td>
+      <td>1</td>
+      <td>9000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019</td>
+      <td>201901</td>
+      <td>2</td>
+      <td>2019010000096</td>
+      <td>70.0</td>
+      <td>2019000000021</td>
+      <td>100001</td>
+      <td>3</td>
+      <td>1</td>
+      <td>70.0</td>
+      <td>1</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2019</td>
+      <td>201901</td>
+      <td>3</td>
+      <td>2019010000153</td>
+      <td>20.0</td>
+      <td>2019000000031</td>
+      <td>110001</td>
+      <td>4</td>
+      <td>1</td>
+      <td>20.0</td>
+      <td>2</td>
+      <td>1400</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2019</td>
+      <td>201901</td>
+      <td>4</td>
+      <td>2019010000198</td>
+      <td>79.0</td>
+      <td>2019000000041</td>
+      <td>110001</td>
+      <td>3</td>
+      <td>1</td>
+      <td>79.0</td>
+      <td>1</td>
+      <td>22700</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2019</td>
+      <td>201901</td>
+      <td>5</td>
+      <td>2019010000205</td>
+      <td>53.0</td>
+      <td>2019000000051</td>
+      <td>270101</td>
+      <td>3</td>
+      <td>1</td>
+      <td>53.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-40fca8fd-2a6c-4b8a-a338-b3428c47e0e0')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-40fca8fd-2a6c-4b8a-a338-b3428c47e0e0 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-40fca8fd-2a6c-4b8a-a338-b3428c47e0e0');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A major issue we encountered while reading the dataset is that the initial dataset was crashing the ram during the reading process, as it was a huge 9GB files. We downsized it twice by narrowing the scope and amount of variables in the query before collab was able to read it in without crashing.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;YEAR&#39;, &#39;SAMPLE&#39;, &#39;SERIAL&#39;, &#39;CBSERIAL&#39;, &#39;HHWT&#39;, &#39;CLUSTER&#39;, &#39;STRATA&#39;,
+       &#39;GQ&#39;, &#39;PERNUM&#39;, &#39;PERWT&#39;, &#39;SCHLTYPE&#39;, &#39;INCTOT&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Variable Legend:</p>
+<ul>
+<li>YEAR (Census year)</li>
+<li>SAMPLE (IPUMS sample identifier)</li>
+<li>SERIAL (Household serial number)</li>
+<li>CBSERIAL (Original Census Bureau household serial number)</li>
+<li>HHWT (Household weight)</li>
+<li>CLUSTER (Household cluster for variance estimation)</li>
+<li>STRATA (Household strata for variance estimation)</li>
+<li>GQ (Group quarters status)</li>
+<li>PERNUM (Person number in sample unit)</li>
+<li>PERWT (Person weight)</li>
+<li>SCHLTYPE (Public or private school)</li>
+<li>INCTOT (Total personal income)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">tidydf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SERIAL&#39;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GQ&#39;</span><span class="p">,</span><span class="s1">&#39;SCHLTYPE&#39;</span><span class="p">,</span><span class="s1">&#39;INCTOT&#39;</span><span class="p">])</span>
+<span class="n">tidydf</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-3a94c921-7287-4d27-b55a-a7a38f89d83e">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SERIAL</th>
+      <th>variable</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>GQ</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>GQ</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>GQ</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>GQ</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>GQ</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9718654</th>
+      <td>1428035</td>
+      <td>INCTOT</td>
+      <td>117000</td>
+    </tr>
+    <tr>
+      <th>9718655</th>
+      <td>1428035</td>
+      <td>INCTOT</td>
+      <td>14000</td>
+    </tr>
+    <tr>
+      <th>9718656</th>
+      <td>1428036</td>
+      <td>INCTOT</td>
+      <td>18500</td>
+    </tr>
+    <tr>
+      <th>9718657</th>
+      <td>1428037</td>
+      <td>INCTOT</td>
+      <td>49900</td>
+    </tr>
+    <tr>
+      <th>9718658</th>
+      <td>1428037</td>
+      <td>INCTOT</td>
+      <td>8900</td>
+    </tr>
+  </tbody>
+</table>
+<p>9718659 rows × 3 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3a94c921-7287-4d27-b55a-a7a38f89d83e')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3a94c921-7287-4d27-b55a-a7a38f89d83e button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3a94c921-7287-4d27-b55a-a7a38f89d83e');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are three types of variables within the dataset:</p>
+<p>ID Related Variables: (Serial #s, year, sample)</p>
+<p>Mathematical Variables: (Weights, Cluster, Strata, Pernum)</p>
+<p>Categorical Variables: (School type, Group Quarters, Total Personal Income)</p>
+<p>To format the data using .melt(), I put serial as the index var (other variables constant with current data query), and the categorical variables as the value variables. I left out the mathematical variables for now, however they may become relevant as value variables in the future as needed.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#The School Type variable shows the proportion of indiviudals in the dataset and what school they go to</span>
+<span class="c1">#0 is N/A</span>
+<span class="c1">#1 is Not enrolled</span>
+<span class="c1">#2 is Public School</span>
+<span class="c1">#3 is private school</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;SCHLTYPE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f0e1d9c3a10&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#Interesting Stat</span>
+<span class="n">PUBS</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;SCHLTYPE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SCHLTYPE&quot;</span><span class="p">]</span><span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">PRIS</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;SCHLTYPE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SCHLTYPE&quot;</span><span class="p">]</span><span class="o">==</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mi">3</span>
+<span class="n">PUBS</span> <span class="o">/</span> <span class="n">PRIS</span>
+<span class="c1">#598521 / 137437</span>
+<span class="c1">#There are over 4x as many public school kids in the dataset than private school kids</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4.354875324694223</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#The Group Quarters variable idicates what living situation the individual resided in</span>
+<span class="c1">#1 is Household under 1970 definition</span>
+<span class="c1">#2 is Additional households under 1990 definition</span>
+<span class="c1">#3 is Group quarters--Institutions</span>
+<span class="c1">#4 is Other group quarters</span>
+<span class="c1">#5 is Additional households under 2000 definition</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;GQ&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    3081285
+4      78375
+3      72946
+2       6006
+5        941
+Name: GQ, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GQ&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">**</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f0e1cf15050&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">shell</span>
-<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">drive</span><span class="o">/</span><span class="n">My</span> <span class="n">Drive</span><span class="o">/</span><span class="n">cmps3160</span><span class="o">/</span><span class="n">_projects</span><span class="o">/</span><span class="n">FinalProjectRovnerMotz</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">drive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">cmps3160</span><span class="o">/</span><span class="n">_projects</span><span class="o">/</span><span class="n">FinalProjectRovnerMotz</span><span class="o">/</span><span class="n">RovnerMotzFinalProject</span><span class="o">.</span><span class="n">ipynb</span>
 </pre></div>
 
     </div>
@@ -13163,210 +13837,23 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] WARNING | pattern &#39;/content/drive/My&#39; matched no files
-[NbConvertApp] WARNING | pattern &#39;Drive/cmps3160/_projects/FinalProjectRovnerMotz.ipynb&#39; matched no files
-This application is used to convert notebook files (*.ipynb)
-        to various other formats.
-
-        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
-=======
-The options below are convenience aliases to configurable class-options,
-as listed in the &#34;Equivalent to&#34; description-line of the aliases.
-To see all configurable class-options for some &lt;cmd&gt;, use:
-    &lt;cmd&gt; --help-all
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
-    Equivalent to: [--Application.log_level=10]
---show-config
-    Show the application&#39;s configuration (human-readable format)
-    Equivalent to: [--Application.show_config=True]
---show-config-json
-    Show the application&#39;s configuration (json format)
-    Equivalent to: [--Application.show_config_json=True]
---generate-config
-    generate default config file
-    Equivalent to: [--JupyterApp.generate_config=True]
--y
-    Answer yes to any questions instead of prompting.
-    Equivalent to: [--JupyterApp.answer_yes=True]
---execute
-    Execute the notebook prior to export.
-    Equivalent to: [--ExecutePreprocessor.enabled=True]
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if &#39;--execute&#39; was specified, too.
-    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename &#39;notebook.*&#39;
-    Equivalent to: [--NbConvertApp.from_stdin=True]
---stdout
-    Write notebook output to stdout instead of files.
-    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only 
-            relevant when converting to notebook format)
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
---clear-output
-    Clear output of current file and save in place, 
-            overwriting the existing notebook.
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
---no-prompt
-    Exclude input and output prompts from converted document.
-    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
---no-input
-    Exclude input cells and output prompts from converted document. 
-            This mode is ideal for generating code-free reports.
-    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True]
---log-level=&lt;Enum&gt;
-    Set the log level by value or name.
-    Choices: any of [0, 10, 20, 30, 40, 50, &#39;DEBUG&#39;, &#39;INFO&#39;, &#39;WARN&#39;, &#39;ERROR&#39;, &#39;CRITICAL&#39;]
-    Default: 30
-    Equivalent to: [--Application.log_level]
---config=&lt;Unicode&gt;
-    Full path of a config file.
-    Default: &#39;&#39;
-    Equivalent to: [--JupyterApp.config_file]
---to=&lt;Unicode&gt;
-    The export format to be used, either one of the built-in formats
-            [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;]
-            or a dotted object name that represents the import path for an
-            `Exporter` class
-    Default: &#39;html&#39;
-    Equivalent to: [--NbConvertApp.export_format]
---template=&lt;Unicode&gt;
-    Name of the template file to use
-    Default: &#39;&#39;
-    Equivalent to: [--TemplateExporter.template_file]
---writer=&lt;DottedObjectName&gt;
-    Writer class used to write the 
-                                        results of the conversion
-    Default: &#39;FilesWriter&#39;
-    Equivalent to: [--NbConvertApp.writer_class]
---post=&lt;DottedOrNone&gt;
-    PostProcessor class used to write the
-                                        results of the conversion
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.postprocessor_class]
---output=&lt;Unicode&gt;
-    overwrite base name use for output files.
-                can only be used when converting one notebook at a time.
-    Default: &#39;&#39;
-    Equivalent to: [--NbConvertApp.output_base]
---output-dir=&lt;Unicode&gt;
-    Directory to write output(s) to. Defaults
-                                  to output to the directory of each notebook. To recover
-                                  previous default behaviour (outputting to the current 
-                                  working directory) use . as the flag value.
-    Default: &#39;&#39;
-    Equivalent to: [--FilesWriter.build_directory]
---reveal-prefix=&lt;Unicode&gt;
-    The URL prefix for reveal.js (version 3.x).
-            This defaults to the reveal CDN, but can be any url pointing to a copy 
-            of reveal.js. 
-            For speaker notes to work, this must be a relative path to a local 
-            copy of reveal.js: e.g., &#34;reveal.js&#34;.
-            If a relative path is given, it must be a subdirectory of the
-            current directory (from which the server is run).
-            See the usage documentation
-            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-            for more details.
-    Default: &#39;&#39;
-    Equivalent to: [--SlidesExporter.reveal_url_prefix]
---nbformat=&lt;Enum&gt;
-    The nbformat version to write.
-            Use this to downgrade notebooks.
-    Choices: any of [1, 2, 3, 4]
-    Default: 4
-    Equivalent to: [--NotebookExporter.nbformat_version]
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-
-            &gt; jupyter nbconvert mynotebook.ipynb
-
-            which will convert mynotebook.ipynb to the default format (probably HTML).
-
-            You can specify the export format with `--to`.
-            Options include [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;].
-
-            &gt; jupyter nbconvert --to latex mynotebook.ipynb
-
-            Both HTML and LaTeX support multiple output templates. LaTeX includes
-            &#39;base&#39;, &#39;article&#39; and &#39;report&#39;.  HTML includes &#39;basic&#39; and &#39;full&#39;. You
-            can specify the flavor of the format used.
-
-            &gt; jupyter nbconvert --to html --template basic mynotebook.ipynb
-
-            You can also pipe the output to stdout, rather than a file
-
-            &gt; jupyter nbconvert mynotebook.ipynb --stdout
-
-            PDF is generated via latex
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-
-            You can get (and serve) a Reveal.js-powered slideshow
-
-            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-
-            Multiple notebooks can be given at the command line in a couple of 
-            different ways:
-
-            &gt; jupyter nbconvert notebook*.ipynb
-            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-
-            or you can specify the notebooks list in a config file, containing::
-
-                c.NbConvertApp.notebooks = [&#34;my_notebook.ipynb&#34;]
-
-            &gt; jupyter nbconvert --config mycfg.py
-
-To see all available configurables, use `--help-all`.
-
+<pre>[NbConvertApp] Converting notebook /content/drive/MyDrive/cmps3160/_projects/FinalProjectRovnerMotz/RovnerMotzFinalProject.ipynb to html
+[NbConvertApp] Writing 289845 bytes to /content/drive/MyDrive/cmps3160/_projects/FinalProjectRovnerMotz/RovnerMotzFinalProject.html
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-439889927619&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;shell&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;jupyter nbconvert --to html /content/drive/My Drive/cmps3160/_projects/FinalProjectRovnerMotz.ipynb\n&#39;</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2357</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2358</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2359</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2360</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2361</span> 
 
-<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">_shell_cell_magic</span><span class="ansi-blue-fg">(args, cmd)</span>
-<span class="ansi-green-intense-fg ansi-bold">    107</span>   result <span class="ansi-blue-fg">=</span> _run_command<span class="ansi-blue-fg">(</span>cmd<span class="ansi-blue-fg">,</span> clear_streamed_output<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    108</span>   <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> parsed_args<span class="ansi-blue-fg">.</span>ignore_errors<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 109</span><span class="ansi-red-fg">     </span>result<span class="ansi-blue-fg">.</span>check_returncode<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    110</span>   <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">    111</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/google/colab/_system_commands.py</span> in <span class="ansi-cyan-fg">check_returncode</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    133</span>     <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    134</span>       raise subprocess.CalledProcessError(
-<span class="ansi-green-fg">--&gt; 135</span><span class="ansi-red-fg">           returncode=self.returncode, cmd=self.args, output=self.output)
-</span><span class="ansi-green-intense-fg ansi-bold">    136</span> 
-<span class="ansi-green-intense-fg ansi-bold">    137</span>   <span class="ansi-green-fg">def</span> _repr_pretty_<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cycle<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>  <span class="ansi-red-fg"># pylint:disable=unused-argument</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;jupyter nbconvert --to html /content/drive/My Drive/cmps3160/_projects/FinalProjectRovnerMotz.ipynb
-&#39; returned non-zero exit status 255.</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre></pre>
 </div>
+
 </div>
 
 </div>
